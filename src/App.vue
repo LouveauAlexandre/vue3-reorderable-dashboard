@@ -21,8 +21,9 @@
         @remove="remove"
         @click="click"
         @sort="sort">
-        <template v-slot:cell="props">
-          <Icon :color="props.item"
+        <template #cell="props">
+          <Icon
+:color="props.item"
                 :index="props.index"
                 :with-button="true"
                 @remove="props.remove()"/>
@@ -81,15 +82,17 @@ body {
   flex-direction: column;
 }
 .color-header {
-  position: relative;
-  padding: 10px 0;
   box-sizing: border-box;
+  margin-bottom: 2%;
+  justify-content: center;
+  text-align: center;
 }
+
 .test {
   width: 100%;
   overflow: hidden;
   overflow-y: auto;
   outline: auto;
-  flex-grow: 10;
+  flex: auto;
 }
 </style>

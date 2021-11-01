@@ -1,6 +1,7 @@
 <template>
   <div ref="gridContainer" class="v-grid" :style="style">
-    <GridItem v-for="v in list"
+    <GridItem
+v-for="v in list"
       :key="v.index"
       :index="v.index"
       :sort="v.sort"
@@ -15,7 +16,8 @@
       @dragend="onDragEnd"
       @drag="onDrag"
       @click="click">
-      <slot name="cell"
+      <slot
+name="cell"
         :item="v.item"
         :index="v.index"
         :sort="v.sort"

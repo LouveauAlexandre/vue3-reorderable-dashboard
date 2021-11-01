@@ -1,6 +1,7 @@
 <template>
   <div class="icon" :style="style">
-    <div v-if="withButton"
+    <div
+v-if="withButton"
          class="icon-delete-btn"
          @mousedown="remove"></div>
     <slot>
@@ -41,7 +42,7 @@ const style = computed(() => {
       'color': brightness.value > 180 ? '#777' : '#f3f3f3'
     }
   }
-  return ''
+  return '';
 });
 
 function remove() {
@@ -66,8 +67,8 @@ function remove() {
   position: relative;
   background-color: transparent;
   margin: 1%;
-  height: 98%;
-  width: 98%;
+  height: 96%;
+  width: 96%;
   border-radius: 10px;
   box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.07);
   color: #777;
@@ -80,15 +81,15 @@ function remove() {
 }
 
 .icon .icon-delete-btn {
-    display: block;
-    position: absolute;
-    width: 12px;
-    height: 12px;
-    border-radius: 7px;
-    right: 6px;
-    top: 6px;
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    background: rgba(255, 255, 255, 0.2);
+  display: block;
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 7px;
+  right: 6px;
+  top: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .v-grid-item-dragging .icon {

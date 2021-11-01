@@ -1,5 +1,6 @@
 <template>
-  <div ref="self"
+  <div
+ref="self"
        :class="className"
        :style="style"
        @mousedown="mousedown"

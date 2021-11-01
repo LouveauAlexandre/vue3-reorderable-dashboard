@@ -105,8 +105,6 @@ const gridResponsiveWidth = computed(() => {
 });
 
 const gridResponsiveHeight = computed(() => {
-  console.log('gridHeight', windowHeight.value);
-  
   if (props.gridHeight < 0) {
     return windowHeight.value;
   } else {
@@ -116,7 +114,6 @@ const gridResponsiveHeight = computed(() => {
 
 const cellWidth = computed(() => {
   if (props.autoCellSize) {
-    console.log('width', gridResponsiveWidth.value, Math.max(Math.ceil(gridResponsiveWidth.value / props.columnCountMax), props.cellMinWidth));
     return Math.max(Math.ceil(gridResponsiveWidth.value / props.columnCountMax) - 1, props.cellMinWidth);
   } else {
     return props.cellWidth;
@@ -125,7 +122,6 @@ const cellWidth = computed(() => {
 
 const cellHeight = computed(() => {
   if (props.autoCellSize) {
-    console.log('height', gridResponsiveHeight.value, gridResponsiveHeight.value / Math.ceil(list.value.length / props.rowCountMax));
     return Math.max(gridResponsiveHeight.value / Math.ceil(list.value.length / props.rowCountMax) - 1, props.cellMinHeight);
   } else {
     return props.cellHeight;

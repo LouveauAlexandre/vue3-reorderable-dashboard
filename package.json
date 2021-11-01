@@ -4,13 +4,20 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore --fix src",
+    "format": "prettier .  --write"
   },
   "dependencies": {
     "vue": "^3.2.20"
   },
   "devDependencies": {
+    "@types/jest": "^27.0.2",
     "@vitejs/plugin-vue": "^1.9.4",
+    "eslint": "^8.1.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-vue": "^8.0.3",
+    "prettier": "2.4.1",
     "typescript": "^4.4.4",
     "vite": "^2.6.13",
     "vue-tsc": "^0.3.0"

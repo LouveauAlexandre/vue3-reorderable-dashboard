@@ -1,4 +1,4 @@
-import { Color } from 'src/composables/gridEmitParam';
+import { Color } from '../composables/gridEmitParam';
 declare const _sfc_main: import("vue").DefineComponent<{
     index: {
         type: NumberConstructor;

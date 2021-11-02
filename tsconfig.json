@@ -1,24 +1,26 @@
 {
   "compilerOptions": {
     "target": "esnext",
-    "useDefineForClassFields": true,
+    "useDefineForClassFields": false,
     "module": "esnext",
     "moduleResolution": "node",
     "strict": true,
     "jsx": "preserve",
     "sourceMap": true,
     "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "baseUrl": ".",
+    "noImplicitAny": true,
+    "declaration": true,
+    "declarationMap": true,
+    "experimentalDecorators": true,
+    "noEmit": true,
     "lib": ["esnext", "dom"],
-    "types": [
-      "jest"
-    ],
+    "types": ["jest"]
   },
   "paths": {
-    "@/*": [
-      "src/*"
-    ]
+    "@/*": ["./src/*"]
   },
   "include": [
     "src/**/*.ts",
@@ -28,7 +30,5 @@
     "tests/**/*.ts",
     "tests/**/*.tsx"
   ],
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }
